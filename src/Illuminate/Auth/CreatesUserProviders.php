@@ -89,6 +89,6 @@ trait CreatesUserProviders
      */
     public function getDefaultUserProvider()
     {
-        return $this->app['config']['auth.defaults.provider'];
+        return $this->app['config']['auth.guards.'.$this->getDefaultDriver().'.provider'];
     }
 }
